@@ -3,7 +3,7 @@ services:
     name: telegram-crypto-bot
     env: python
     pythonVersion: "3.11"
-    repo: https://github.com/YOUR_USERNAME/YOUR_REPO_NAME # Change this to your repository URL
+    repo: https://github.com/Tima2028/crypto-bot1/blob/main # Change this to your repository URL
     buildCommand: "pip install -r telegram_bot/requirements.txt"
     startCommand: "python telegram_bot/bot.py"
     envVars:
