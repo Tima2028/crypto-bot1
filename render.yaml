@@ -2,10 +2,12 @@ services:
   - type: worker
     name: telegram-crypto-bot
     env: python
-    pythonVersion: "3.11"
-    repo: https://github.com/Tima2028/crypto-bot1/blob/main # Change this to your repository URL
+    # НЕ ЗАБУДЬТЕ ИЗМЕНИТЬ ССЫЛКУ НА ВАШ РЕПОЗИТОРИЙ!
+    repo: https://github.com/Tima2028/crypto-bot1/edit/main 
     buildCommand: "pip install -r telegram_bot/requirements.txt"
     startCommand: "python telegram_bot/bot.py"
     envVars:
+      - key: PYTHON_VERSION
+        value: "3.11.9" # Указываем точную версию
       - key: TELEGRAM_BOT_TOKEN
-        sync: false # This makes Render keep the value secret
+        sync: false
